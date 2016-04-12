@@ -1,0 +1,36 @@
+<articles-table></articles-table>
+<!--<md-toolbar layout="row">-->
+    <!--<md-button class="md-icon-button md-primary" ng-click="dialog.openAddNew('articles')" aria-label="Добавить новую">-->
+        <!--<md-icon md-svg-icon="../static/img/icons/ic_control_point_white_24px.svg"></md-icon>-->
+    <!--</md-button>-->
+    <!--<md-button class="md-icon-button md-primary" ng-click="dialog.openEdit('articles')" aria-label="Редактировать" ng-show="tables.articles.selectedRows.length === 1">-->
+        <!--<md-icon md-svg-icon="../static/img/icons/ic_edit_white_24px.svg"></md-icon>-->
+    <!--</md-button>-->
+    <!--<md-button class="md-icon-button md-primary" aria-label="Удалить" ng-click="dialog.openDelete('articles')" ng-show="tables.articles.selectedRows.length > 0">-->
+        <!--<md-icon md-svg-icon="../static/img/icons/ic_clear_white_24px.svg"></md-icon>-->
+    <!--</md-button>-->
+<!--</md-toolbar>-->
+<!--<md-table-container>-->
+    <!--<table md-table md-row-select="true" ng-model="tables.articles.selectedRows">-->
+        <!--<thead md-head md-order="tables.articles.order">-->
+        <!--<tr md-row>-->
+            <!--<th md-column md-order-by="name"><span>Имя</span></th>-->
+            <!--<th md-column md-order-by="url"><span>URL</span></th>-->
+            <!--<th md-column md-order-by="year"><span>Год</span></th>-->
+            <!--<th md-column md-order-by="photo"><span>Фото</span></th>-->
+            <!--<th md-column><span>Места</span></th>-->
+            <!--<th md-column><span>Тэги</span></th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody md-body>-->
+        <!--<tr md-row md-select="entity" md-auto-select="true" ng-repeat="entity in tables.articles.data | orderBy: tables.articles.order">-->
+            <!--<td md-cell>{{entity.name}}</td>-->
+            <!--<td md-cell>{{entity.url}}</td>-->
+            <!--<td md-cell>{{entity.year}}</td>-->
+            <!--<td md-cell>{{entity.photo}}</td>-->
+            <!--<td md-cell>{{_.map(entity.places, 'name').join(', ')}}</td>-->
+            <!--<td md-cell>{{entity.tags.join(', ')}}</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</md-table-container>-->

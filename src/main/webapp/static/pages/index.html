@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sawyl91 Traveling</title>
+
+    <link rel="stylesheet" href="../static/bower_components/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="../static/bower_components/angular-material/angular-material.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/css/app.css"/>
+</head>
+<body ng-app="travelingApp" ng-controller="IndexTravelingCtrl as ctrl">
+<md-toolbar ng-cloak>
+    <div class="md-toolbar-tools">
+        <h2>
+            <span>Путешествия</span>
+        </h2>
+        <span flex></span>
+        <md-menu md-position-mode="target-right target" md-offset="0 50">
+            <md-button aria-label="По странам" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                <span>По странам</span>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item ng-repeat="country in getCountries()">
+                    <md-button ng-click="showArticlesByCountry(country)">{{country.name}}</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <md-menu md-position-mode="target-right target" md-offset="0 50">
+            <md-button aria-label="По годам" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                <span>По годам</span>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item ng-repeat="year in getYears()">
+                    <md-button ng-click="showArticlesByYear(year)">{{ year }}</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>
+
+<div id="travel-map"></div>
+
+<script type="application/javascript" src="../static/bower_components/jquery/dist/jquery.js"></script>
+<script type="application/javascript" src="../static/bower_components/lodash/dist/lodash.js"></script>
+<script type="application/javascript" src="../static/bower_components/leaflet/dist/leaflet.js"></script>
+<script type="application/javascript" src="../static/bower_components/leaflet-providers/leaflet-providers.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular/angular.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-animate/angular-animate.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-aria/angular-aria.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-messages/angular-messages.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-material/angular-material.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-material-data-table/dist/md-data-table.js"></script>
+<script type="application/javascript" src="../static/bower_components/angular-material-icons/angular-material-icons.js"></script>
+
+<script type="application/javascript" src="../static/js/mainMap.js"></script>
+<script type="application/javascript" src="../static/js/classes.js"></script>
+<script type="application/javascript" src="../static/js/util.js"></script>
+<script type="application/javascript" src="../static/js/angular/app.js"></script>
+<script type="application/javascript" src="../static/js/angular/services.js"></script>
+<script type="application/javascript" src="../static/js/angular/directives.js"></script>
+
+</body>
+</html>

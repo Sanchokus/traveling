@@ -1,0 +1,31 @@
+<md-dialog-content>
+    <md-input-container class="md-block" flex>
+        <label>Имя</label>
+        <input ng-model="entity.name">
+    </md-input-container>
+    <md-input-container class="md-block" flex>
+        <label>URL</label>
+        <input ng-model="entity.url">
+    </md-input-container>
+    <md-input-container class="md-block" flex>
+        <label>Год</label>
+        <input ng-model="entity.year" type="number">
+    </md-input-container>
+    <md-input-container class="md-block" flex>
+        <label>Фото</label>
+        <input ng-model="entity.photo">
+    </md-input-container>
+    <md-input-container class="md-block" flex>
+        <label>Места</label>
+        <md-select multiple
+                   ng-model="entity.places"
+                   ng-model-options="{trackBy: '$value.id'}">
+            <md-option ng-repeat="place in allEntities.place"
+                       ng-value="place">
+                {{place.name}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+    <!--TODO tags support-->
+
+</md-dialog-content>

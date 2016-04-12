@@ -1,0 +1,29 @@
+<md-dialog-content>
+    <div layout="column">
+        <md-input-container class="md-block" flex>
+            <label>Имя</label>
+            <input ng-model="entity.name">
+        </md-input-container>
+        <md-input-container class="md-block" flex>
+            <label>Страна</label>
+            <md-select ng-model="entity.country"
+                       ng-model-options="{trackBy: '$value.id'}">
+                <md-option ng-repeat="country in allEntities.country"
+                           ng-value="country"">
+                {{country.name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <div layout="row">
+            <md-input-container class="md-block" flex="33">
+                <label>X</label>
+                <input ng-model="entity.x" type="number" name="axis_x"/>
+            </md-input-container>
+            <md-input-container class="md-block" flex="33">
+                <label>Y</label>
+                <input ng-model="entity.y" type="number" name="axis_y"/>
+            </md-input-container>
+            <md-button flex="33" ng-click="openAxisEditWindow()">На карте</md-button>
+        </div>
+    </div>
+</md-dialog-content>

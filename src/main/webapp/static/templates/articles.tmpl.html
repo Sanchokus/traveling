@@ -1,0 +1,24 @@
+<md-dialog ng-cloak flex="66">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 class="text-center">{{ currentCardInfo.title }}</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+
+        <div layout="row" layout-wrap layout-align="center">
+            <md-card md-whiteframe="10" flex="30" ng-repeat="article in currentCardInfo.articles">
+                <a ng-href="{{article.url}}" style="text-decoration: none" target="_blank" layout="column" flex layout-fill>
+                    <div layout="column" layout-align="center center" flex layout-fill>
+                        <md-card-title class="card-article-name" flex="none">
+                            {{article.name}}
+                        </md-card-title>
+                        <div class="article-photo-holder" flex layout-fill layout="row" layout-align="center center">
+                            <img class="article-photo-img" ng-src="{{article.photo}}" flex/>
+                        </div>
+                    </div>
+                </a>
+            </md-card>
+        </div>
+    </md-dialog-content>
+</md-dialog>

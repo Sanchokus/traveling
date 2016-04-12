@@ -1,0 +1,25 @@
+<md-table-container>
+    <table md-table md-row-select="true" ng-model="table.selectedRows">
+        <thead md-head md-order="table.order">
+        <tr md-row>
+            <th md-column md-order-by="name"><span>Имя</span></th>
+            <th md-column md-order-by="url"><span>URL</span></th>
+            <th md-column md-order-by="year"><span>Год</span></th>
+            <th md-column md-order-by="photo"><span>Фото</span></th>
+            <th md-column><span>Места</span></th>
+            <th md-column><span>Тэги</span></th>
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row md-select="entity" md-auto-select="true" ng-repeat="entity in table.data | orderBy: table.order">
+            <td md-cell>{{entity.name}}</td>
+            <td md-cell>{{entity.url}}</td>
+            <td md-cell>{{entity.year}}</td>
+            <td md-cell>{{entity.photo}}</td>
+            <!--<td md-cell>{{ showAsList(entity.places) }}</td>-->
+            <td md-cell>{{ _.map(entity.places, 'name').join(', ') }}</td><!--TODO tags support-->
+            <td md-cell>{{entity.tags.join(', ')}}</td>
+        </tr>
+        </tbody>
+    </table>
+</md-table-container>

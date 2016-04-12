@@ -1,0 +1,27 @@
+<md-dialog ng-cloak flex="66">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 class="text-center">Поиск по тэгам</h2>
+        </div>
+    </md-toolbar>
+    <md-dialog-content style="padding: 20px">
+        <p></p>
+        <form ng-submit="$event.preventDefault()">
+            <md-autocomplete
+                    placeholder="Наберите тут то, что ищете"
+                    md-search-text="searchText"
+                    md-items="item in getTagMatches(searchText)"
+                    md-item-text="item">
+
+                <md-item-template>
+                    <md-button ng-click="showArticlesFromTagDialog(item)">
+                        <span md-highlight-text="searchText">{{item}}</span>
+                    </md-button>
+                </md-item-template>
+                <md-not-found>
+                    Такого не найдено... Попробуйте другой запрос.
+                </md-not-found>
+            </md-autocomplete>
+        </form>
+    </md-dialog-content>
+</md-dialog>

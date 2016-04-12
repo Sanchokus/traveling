@@ -1,0 +1,14 @@
+<md-table-container>
+    <table md-table md-row-select="true" ng-model="table.selectedRows">
+        <thead md-head md-order="table.order">
+        <tr md-row>
+            <th md-column md-order-by="name"><span>Имя</span></th>
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row md-select="entity" md-auto-select="true" ng-repeat="entity in table.data | orderBy: table.order">
+            <td md-cell>{{entity.name}}</td>
+        </tr>
+        </tbody>
+    </table>
+</md-table-container>

@@ -1,0 +1,11 @@
+<md-toolbar layout="row">
+    <md-button class="md-icon-button md-primary" ng-click="toolbar.add()" aria-label="Добавить новую">
+        <md-icon md-svg-icon="../static/img/icons/ic_control_point_white_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-icon-button md-primary" ng-click="toolbar.edit()" aria-label="Редактировать" ng-show="table.selectedRows.length === 1">
+        <md-icon md-svg-icon="../static/img/icons/ic_edit_white_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-icon-button md-primary" aria-label="Удалить"ng-click="toolbar.delete()" ng-show="table.selectedRows.length > 0">
+        <md-icon md-svg-icon="../static/img/icons/ic_clear_white_24px.svg"></md-icon>
+    </md-button>
+</md-toolbar>

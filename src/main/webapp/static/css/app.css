@@ -1,0 +1,41 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+.article-photo-holder {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-block; }
+
+.article-photo-holder img {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto; }
+
+#articles-info-container {
+  height: 400px;
+  width: 100%; }
+
+.repeated-item {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-top: 15px;
+  text-align: center;
+  width: 400px; }
+
+.card-article-name {
+  color: black; }
+
+#travel-map {
+  width: 100%;
+  height: 550px; }
+
+#search-nav {
+  background-color: rgba(63, 81, 181, 0.9); }
+
+#search-input {
+  background-color: white; }
+
+.text-center {
+  text-align: center;
+  width: 100%; }
